@@ -1,0 +1,21 @@
+.container-fluid{
+    margin-top: 100px;
+}
+
+.footer-container{
+    display: flex;
+   align-items: center;
+    justify-content: center;
+    p{
+        margin: 10px auto;
+        span{
+            color:#6eeca7;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    p{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,141 @@
+.container-home{
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+
+}
+.row-home{
+position: relative;
+
+}
+.col-home{
+   
+    .home-body{
+margin-left: 10%;
+margin-top: 50px;
+   
+    }
+   
+.home-text{
+    margin-top: 20px;
+   font-size: 50px;
+}
+.home-subtext{
+margin-top: 15px;
+font-size: 15px;
+}
+.connect{
+    margin-top: 40px;
+    text-decoration: underline;
+    cursor: pointer;
+    a {
+            color: #6ff4a5;
+        }
+}
+
+.experience{
+    margin-top: 80px;
+    width: 23%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+}
+.home2{
+position: relative;
+ 
+    .dev-icon{
+        position:relative;
+        margin: 50px auto;
+        .logo {
+                position: absolute;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+    }
+    .react{
+        position:absolute;
+        top:100px;
+        left:0%;
+    }
+ .python {
+     position: absolute;
+     top: 300px;
+     right: 5%;
+ }
+  .nodejs {
+      position: absolute;
+      bottom:-60px;
+      right: 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+.dev-icon {
+    position: relative;
+      padding: 100px 0;
+
+        .logo {
+            position: fixed;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+            .python {
+                position: absolute;
+                top: 100px;
+                right: 5%;
+                }
+                 .nodejs {
+                    position: absolute;
+                    bottom: -180px;
+                    right: 5%;
+                }
+                .react{
+                    position: absolute;
+                    bottom:70px;
+                }
+    }
+}
+@media screen and (max-width: 480px) {
+    // .home-body {
+    //     width: 100%;
+    //     padding: 0px;
+    //     margin: 0 20px;
+    //  border: 1px solid blue;
+    //     }
+    .experience {
+            margin:0px;
+        
+        }
+    .home2{
+        margin:40px auto;
+    }
+    .dev-icon {
+        position: relative;
+      display: flex;
+      align-items: center; 
+        .logo {
+            position: fixed;
+            top: -10px;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .python {
+            position: absolute;
+            top: 180px;
+            right: 5%;
+        }
+
+        .nodejs {
+            position: absolute;
+            top: 0;
+            right: 5%;
+        }
+    }
+}
