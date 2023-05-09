@@ -32,12 +32,20 @@
     margin-top: 100px;
 }
 .projects-col{
+    position: relative;
         border-radius: 30px;
         height: 60vh;
+         
 }
+
 .projects-container{
     margin: 2em auto;
     padding: 4em 10em;
+}
+button a{
+    text-decoration: none;
+    color: #fff;
+   
 }
    button:focus {
        box-shadow: none !important;

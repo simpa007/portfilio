@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Contact.scss";
 import { HiOutlineMailOpen, HiLocationMarker, HiPhone } from "react-icons/hi";
-import { BsLinkedin } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
+
 export default function Contact() {
-  const [formFields, setFormFields] = useState({
+  const initialState = {
     name: "",
     email: "",
     message: "",
-  });
+  };
+  const [formFields, setFormFields] = useState(initialState);
   const { name, email, message } = formFields;
 
   const handleChange = (event: any) => {
@@ -27,12 +27,13 @@ export default function Contact() {
       joined: new Date(),
     };
     axios
-      .post("http://localhost:4000/contact", json)
+      .post("http://localhost:5000/contact", json)
       .then((user) => {
-        if (!user.data.name || !user.data.email || !user.data.message) {
+        if (!user.data) {
           console.log("Please enter field");
         } else {
           console.log(user.data);
+          setFormFields(initialState);
         }
       })
       .catch((err) => {
@@ -73,17 +74,17 @@ export default function Contact() {
             </div>
             <div className="contact-icon">
               <span>
-                <a href="">
-                  <BsFacebook color="#fff" size="35px" />
+                <a href="https://www.instagram.com/simpa_sol/">
+                  <BsInstagram color="#fff" size="35px" />
                 </a>
               </span>
               <span>
-                <a href="">
+                <a href="https://github.com/simpa007">
                   <BsGithub color="#fff" size="35px" />
                 </a>
               </span>
               <span>
-                <a href="">
+                <a href="https://www.linkedin.com/in/simpa-emmanuel-67a5981a1/">
                   <BsLinkedin color="#fff" size="35px" />
                 </a>
               </span>

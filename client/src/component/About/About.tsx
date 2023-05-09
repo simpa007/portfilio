@@ -2,7 +2,7 @@ import React from "react";
 import "./About.scss";
 import { IoMdDownload } from "react-icons/io";
 import ProgressBar from "react-bootstrap/ProgressBar";
-const pdf = require("../../assests/Resume/Front-End Developer.pdf");
+const pdf = require("../../assests/Resume/Front_end_Developer.pdf");
 // const profile = require("../../img/undraw_Pic_profile-removebg.png");
 export default function About() {
   return (
@@ -32,16 +32,23 @@ export default function About() {
                 Emmanuel
               </h1>
               <p>
-                Non laboris consequat labore adipisicing dolore velit dolore
-                deserunt velit eiusmod aute cupidatat occaecat proident. Amet
-                laboris consectetur adipisicing eiusmod consequat veniam cillum
-                nisi cillum cillum elit. Labore sunt qui magna veniam qui.
-                Laborum adipisicing laborum commodo proident irure aliqua
-                laborum. Incididunt proident fugiat deserunt id aute voluptate.
-                Magna eu officia est incididunt eu culpa ullamco ipsum culpa
-                excepteur proident irure aliqua laborum. Officia in adipisicing
-                fugiat velit cupidatat fugiat velit aute dolore proident sunt ex
-                occaecat.
+                I'm a Frontend Developer & freelance web developer with over 3+
+                years of expreiences in wide range of design and development
+                disciplines. I'm passionate about music, technology and
+                basically everything that adds positive impact in ones life.{" "}
+                <br />
+                <br />
+                My work currently consists of a full time engineering role at
+                Aipalbot Nigeria where we developer software and also carry out
+                mentorship program I find this balancing act to be super
+                resourceful in terms my learning as a frontend developer, as
+                well as for keeping up with the rapid expansion of developer
+                tools, libraries, frameworks, etc.
+                <br />
+                <br /> Whether you're a business owner looking to get started on
+                a app or web development project with a freelance web developer,
+                a developer looking to collaborate on something cool, or just
+                wanting to say hi, shoot me a message and let's work together.
               </p>
               <section className="skills">
                 <h3>Skills</h3>

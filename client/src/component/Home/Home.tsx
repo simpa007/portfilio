@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+
 import "./Home.scss";
 const logo = require("../../img/undraw-bgremove.png");
 const react = require("../../img/physics.png");
@@ -15,18 +15,6 @@ export default function Home() {
             // style={{ border: "2px solid red" }}
           >
             <div className="home-body">
-              {/* <Button
-                className="btn"
-                size="lg"
-                variant="outline"
-                style={{
-                  outline: "none",
-                  color: "#6ff4a5",
-                  borderColor: "#6ff4a5",
-                }}
-              >
-                Front-End Developer
-              </Button> */}
               <button
                 type="button"
                 style={{
