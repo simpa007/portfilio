@@ -27,7 +27,7 @@ export default function Contact() {
       joined: new Date(),
     };
     axios
-      .post("http://localhost:5000/contact", json)
+      .post("https://portfilio-server.onrender.com", json)
       .then((user) => {
         if (!user.data) {
           console.log("Please enter field");
