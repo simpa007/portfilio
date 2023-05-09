@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import "./Home.scss";
 const logo = require("../../img/undraw-bgremove.png");
 const react = require("../../img/physics.png");
