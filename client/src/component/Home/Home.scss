@@ -72,8 +72,18 @@ position: relative;
       right: 10%;
   }
 }
+// @media (max-width:928px) {
+//     .home-body {
+//             position: relative;
+//             top: 50px;
+//             margin: 0 auto;
+//             border: 1px solid red;
+//         }
+
+//     }
 
 @media screen and (max-width: 768px) {
+  
 .dev-icon {
     position: relative;
       padding: 100px 0;

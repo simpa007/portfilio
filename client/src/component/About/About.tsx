@@ -35,15 +35,14 @@ export default function About() {
                 I'm a Frontend Developer & freelance web developer with over 3+
                 years of expreiences in wide range of design and development
                 disciplines. I'm passionate about music, technology and
-                basically everything that adds positive impact in ones life.{" "}
-                <br />
+                basically everything that lives on the internet. <br />
                 <br />
                 My work currently consists of a full time engineering role at
-                Aipalbot Nigeria where we developer software and also carry out
+                Aipalbot Nigeria where we build software and also carry out
                 mentorship program I find this balancing act to be super
-                resourceful in terms my learning as a frontend developer, as
-                well as for keeping up with the rapid expansion of developer
-                tools, libraries, frameworks, etc.
+                resourceful in terms of my learning as a frontend developer, as
+                well as keeping up with the rapid expansion of developer tools,
+                libraries, frameworks, etc.
                 <br />
                 <br /> Whether you're a business owner looking to get started on
                 a app or web development project with a freelance web developer,

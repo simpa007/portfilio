@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
 import { HashLink } from "react-router-hash-link";
-import { BsLinkedin } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
 const hamburger = require("../logo/icons8-hamburger-menu-64.png");
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);

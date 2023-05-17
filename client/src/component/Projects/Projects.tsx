@@ -112,7 +112,9 @@ export default function Projects() {
                   className="btn btn-outline"
                   style={{ borderColor: "#e44002", color: "#fff" }}
                 >
-                  View Code
+                  <a href="https://github.com/simpa007/face-recognition-app">
+                    View Code
+                  </a>
                 </button>
               </div>
             </div>
@@ -154,7 +156,7 @@ export default function Projects() {
                   className="btn btn-outline"
                   style={{ borderColor: "#952aff", color: "#fff" }}
                 >
-                  View Code
+                  <a href="https://github.com/simpa007/e-commerce">View Code</a>
                 </button>
               </div>
             </div>
@@ -177,7 +179,7 @@ export default function Projects() {
                   className="btn"
                   style={{ backgroundColor: "#cd3e94", color: "#fff" }}
                 >
-                  View Website
+                  <a href="https://simpadev.netlify.app/">View Website</a>
                 </button>
 
                 <button
@@ -185,7 +187,7 @@ export default function Projects() {
                   className="btn btn-outline"
                   style={{ borderColor: "#cd3e94", color: "#fff" }}
                 >
-                  View Code
+                  <a href="https://github.com/simpa007/portfilio">View Code</a>
                 </button>
               </div>
             </div>

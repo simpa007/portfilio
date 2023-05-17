@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Contact.scss";
 import { HiOutlineMailOpen, HiLocationMarker, HiPhone } from "react-icons/hi";
-import { BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export default function Contact() {
   const initialState = {
@@ -63,7 +63,7 @@ export default function Contact() {
                 <span>
                   <HiLocationMarker size="28px" />
                 </span>
-                Lagos, Nigeria.
+                Abuja, Nigeria.
               </p>
               <p>
                 <span>
@@ -79,8 +79,8 @@ export default function Contact() {
                 </a>
               </span>
               <span>
-                <a href="https://github.com/simpa007">
-                  <BsGithub color="#fff" size="35px" />
+                <a href="https://twitter.com/Simpa_sol">
+                  <BsTwitter color="#fff" size="35px" />
                 </a>
               </span>
               <span>
@@ -120,7 +120,9 @@ export default function Contact() {
                 value={message}
                 onChange={handleChange}
               />
-              <button type="submit">Submit</button>
+              <button type="submit" className="btn">
+                Submit
+              </button>
             </form>
           </div>
         </div>

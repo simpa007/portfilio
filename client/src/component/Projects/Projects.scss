@@ -42,9 +42,13 @@
     margin: 2em auto;
     padding: 4em 10em;
 }
-button a{
-    text-decoration: none;
+button {
+    display: flex;
+    a{
+text-decoration: none;
     color: #fff;
+    }
+   
    
 }
    button:focus {
