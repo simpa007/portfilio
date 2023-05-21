@@ -30,9 +30,9 @@ export default function Contact() {
       .post("https://portfilio-server.onrender.com", json)
       .then((user) => {
         if (!user.data) {
-          console.log("Please enter field");
+          alert("Please enter field");
         } else {
-          console.log(user.data);
+          alert("Successful");
           setFormFields(initialState);
         }
       })
