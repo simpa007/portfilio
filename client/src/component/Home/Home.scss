@@ -58,19 +58,24 @@ position: relative;
     }
     .react{
         position:absolute;
-        top:100px;
+        top:150px;
         left:0%;
     }
  .python {
      position: absolute;
      top: 300px;
-     right: 5%;
+     right: 0;
  }
   .nodejs {
       position: absolute;
-      bottom:-60px;
-      right: 10%;
+      bottom:-100px;
+      right:15%;
   }
+         .wordpress {
+             position: absolute;
+             left: 35%;
+             top:-30px;
+         }
 }
 // @media (max-width:928px) {
 //     .home-body {
@@ -89,7 +94,7 @@ position: relative;
       padding: 100px 0;
 
         .logo {
-            position: fixed;
+            // position: fixed;
             width: 100%;
             max-width: 100%;
             height: auto;
@@ -108,6 +113,12 @@ position: relative;
                     position: absolute;
                     bottom:70px;
                 }
+                             .wordpress {
+                                     position: absolute;
+                                     left: 35%;
+                                     top: 50px;
+                                 }
+             
     }
 }
 @media screen and (max-width: 480px) {
