@@ -15,10 +15,14 @@ margin-left: 10%;
 margin-top: 50px;
    
     }
+    .header{
+        font-size: 20px;
+        font-weight: 700;
+    }
    
 .home-text{
     margin-top: 20px;
-   font-size: 50px;
+   font-size: 70px;
 }
 .home-subtext{
 margin-top: 15px;
@@ -158,5 +162,10 @@ position: relative;
             top: 0;
             right: 5%;
         }
+                .wordpress {
+                    position: absolute;
+                    left: 25%;
+                    top: -40px;
+                }
     }
 }

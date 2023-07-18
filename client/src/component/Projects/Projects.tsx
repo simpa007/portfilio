@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Projects.scss";
-import { url } from "inspector";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { squareVariants } from "../../varients";
 const netflix = require("../../img/netflix.PNG");
 const portfilio = require("../../img/portfilio.PNG");
 const faceRecongnition = require("../../img/face-recongnition.PNG");
 const ecommerce = require("../../img/ecommerce.PNG");
 export default function Projects() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   const style1 = {
     border: " solid #3ecd5e ",
     padding: "10px",
@@ -39,7 +50,12 @@ export default function Projects() {
     backgroundRepeat: "no-repeat",
   };
   return (
-    <>
+    <motion.div
+      variants={squareVariants}
+      animate={controls}
+      ref={ref}
+      initial="hidden"
+    >
       <div id="projects" className="projects-text">
         <h1 className="header">
           <span style={{ color: "#6ff4a5" }}>03.</span> Projects
@@ -198,6 +214,6 @@ export default function Projects() {
           ></div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }

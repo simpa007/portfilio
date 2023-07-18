@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.scss";
 import { IoMdDownload } from "react-icons/io";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { squareVariants } from "../../varients";
 const pdf = require("../../assests/Resume/Front_end_Developer.pdf");
-// const profile = require("../../img/undraw_Pic_profile-removebg.png");
+
 export default function About() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
-    <div id="about">
+    <motion.div
+      id="about"
+      variants={squareVariants}
+      animate={controls}
+      ref={ref}
+      initial="hidden"
+    >
       <div className="about-text">
         <h1 className="header">
           <span style={{ color: "#6ff4a5" }}>01.</span> About Me
@@ -181,6 +198,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,10 +1,21 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import "./Contact.scss";
+import axios from "axios";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { squareVariants } from "../../varients";
 import { HiOutlineMailOpen, HiLocationMarker, HiPhone } from "react-icons/hi";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export default function Contact() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   const initialState = {
     name: "",
     email: "",
@@ -43,7 +54,13 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact">
+    <motion.div
+      id="contact"
+      variants={squareVariants}
+      animate={controls}
+      ref={ref}
+      initial="hidden"
+    >
       <div className="contact-text">
         <h1 className="header">
           <span style={{ color: "#6ff4a5" }}>04.</span> Contact
@@ -127,6 +144,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

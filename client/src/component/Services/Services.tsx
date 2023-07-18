@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.scss";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { squareVariants } from "../../varients";
 const figma = require("../../logo/icons8-figma-48.png");
 const coreldraw = require("../../logo/icons8-coreldraw-48.png");
 const mobile = require("../../logo/icons8-iphone-se-48.png");
@@ -7,8 +10,22 @@ const web = require("../../logo/icons8-web-design-48.png");
 const wordpress = require("../../logo/icons8-wordpress-48.png");
 const commercial = require("../../logo/icons8-commercial-48.png");
 export default function Services() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
-    <>
+    <motion.div
+      id="about"
+      variants={squareVariants}
+      animate={controls}
+      ref={ref}
+      initial="hidden"
+    >
       <div className="services__text" id="services">
         <h1 className="header">
           <span style={{ color: "#6ff4a5" }}>02.</span> Services
@@ -78,6 +95,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }

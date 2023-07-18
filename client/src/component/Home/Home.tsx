@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
 import "./Home.scss";
 const logo = require("../../img/bgremove.png");
 const react = require("../../img/physics.png");
@@ -30,18 +30,32 @@ export default function Home() {
     <div id="home">
       <div className="container container-home">
         <div className="row row-home">
-          <div className="col-md-6 col-sm-12 col-home">
+          <motion.div
+            className="col-md-6 col-sm-12 col-home"
+            initial={{ y: "100vh" }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
+          >
             <div className="home-body">
-              <button
-                type="button"
-                style={{
-                  outline: "none",
-                  color: "#fff",
-                }}
-                className="btn btn-outline-success btn-lg"
-              >
-                {text}
-              </button>
+              <h1 className="header">
+                I'm a{" "}
+                <motion.span
+                  style={{ color: "#6ff4a5" }}
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{
+                    x: 0,
+                    opacity: 1,
+                    transition: { duration: 0.2, ease: easeInOut },
+                  }}
+                  exit={{
+                    x: -100,
+                    opacity: 0,
+                    transition: { duration: 0.2, ease: easeInOut },
+                  }}
+                >
+                  {text}
+                </motion.span>
+              </h1>
 
               <h1 className="home-text">
                 Talk is Cheap.
@@ -66,11 +80,14 @@ export default function Home() {
                 <br /> EXPERIENCE
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             className="col-md-6 col-sm-12 home2"
             // style={{ border: "2px solid red" }}
+            initial={{ y: "-100vh" }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
           >
             <div className="dev-icon">
               <div>
@@ -88,7 +105,7 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

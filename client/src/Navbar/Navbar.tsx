@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
 import { HashLink } from "react-router-hash-link";
-const hamburger = require("../logo/icons8-hamburger-menu-64.png");
-function Navbar() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
+import { motion } from "framer-motion";
 
-  // const handleExpanded = () => {
-  //   setIsNavExpanded(!isNavExpanded);
-  // };
+function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg  navbar-dark navbar-1">
       <div className="container">
@@ -25,7 +21,10 @@ function Navbar() {
         >
           <i
             className="fa-solid fa-bars fa-beat"
-            style={{ color: "#6eeca7" }}
+            style={{
+              color: "#6eeca7",
+              fontSize: "1.5em",
+            }}
           ></i>
         </button>
         <div
